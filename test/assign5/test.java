@@ -45,4 +45,16 @@ public class test {
 		String actual = eng.translateEng(420);
 		assertThat(actual, is(expected));
 	}
+	@Test
+	public void test111() {
+		String expected = "one hundred eleven";
+		String actual = eng.translateEng(111);
+		assertThat(actual, is(expected));
+	}
+	@Test
+	public void test0() {
+		String expected = "zero";
+		String actual = eng.translateEng(0);
+		assertThat(actual, is(expected));
+	}
 }
