@@ -15,6 +15,14 @@ public class IntToEng {
 
     // 数値を英訳する変換するメソッド
     static String translateEng(int n) {
-        return "";
+    	String[] num = {"zero", "one", "two", "three", "four",
+    			"five", "six", "seven", "eight", "nine",
+    			"ten", "eleven", "twelve", "thirteen", "fourteen",
+    			"fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+    	String[] num2 = {"","","twenty", "thirty", "forty", "fifty", "sixty","seventy", "eighty", "ninety"};
+    	String ichi = num[n % 10];
+    	String ju = num2[n / 10];
+
+        return ichi+" "+ju;
     }
 }
