@@ -21,5 +21,28 @@ public class test {
 		String actual = eng.translateEng(21);
 		assertThat(actual, is(expected));
 	}
-
+	@Test
+	public void test99() {
+		String expected = "ninety nine";
+		String actual = eng.translateEng(99);
+		assertThat(actual, is(expected));
+	}
+	@Test
+	public void test100() {
+		String expected = "one hundred";
+		String actual = eng.translateEng(100);
+		assertThat(actual, is(expected));
+	}
+	@Test
+	public void testminas1() {
+		String expected = "正の整数で。";
+		String actual = eng.translateEng(-1);
+		assertThat(actual, is(expected));
+	}
+	@Test
+	public void test420() {
+		String expected = "four hundred twenty";
+		String actual = eng.translateEng(420);
+		assertThat(actual, is(expected));
+	}
 }
