@@ -22,9 +22,12 @@ public class IntToEng {
     			"fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
     	String[] num2 = {"","","twenty", "thirty", "forty", "fifty", "sixty","seventy", "eighty", "ninety","hundred"};
     	
+    	return ret(num, num2, n);
+    }
+    
+    public static String ret(String[] num, String[] num2, int n) {
+    	String digit = "";
 
-    	String digit ="";
-    	
     	if(n>99){//100以上の場合
     		if(n%100==0) return num[n/100]+" "+ num2[10];
     		digit += num[n/100] + " " + num2[10] + " ";
@@ -37,9 +40,8 @@ public class IntToEng {
     	
     	if(n<100){	//100以下の場合
     		if(n<20) return digit + num[n];
-    		else if(n %10 ==0) return digit + num2[n/10];
-        	
-    }
-    	 return digit+ju+" "+ichi;
+    		else if(n %10 ==0) return digit + num2[n/10];	
+    	}
+    	return digit+ju+" "+ichi;
     }
 }
