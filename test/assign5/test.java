@@ -57,5 +57,11 @@ public class test {
 		String actual = eng.translateEng(0);
 		assertThat(actual, is(expected));
 	}
+	@Test
+	public void test1000() {
+		String expected = "0〜999までしかできません。";
+		String actual = eng.translateEng(1000);
+		assertThat(actual, is(expected));
+	}
 	
 }
